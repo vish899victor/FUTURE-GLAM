@@ -1,0 +1,308 @@
+{% load static %}
+{%static 'images' as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Future Glam &mdash; choose your Future</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link href="{% static 'css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <div class="py-2 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-9 d-none d-lg-block">
+            <a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> Have a questions?</a> 
+            <a href="#" class="small mr-3"><span class="icon-phone2 mr-2"></span> 913 747 8499</a> 
+            <a href="#" class="small mr-3"><span class="icon-envelope-o mr-2"></span> sahil.kalal21@vit.edu</a> 
+          </div>
+          {% if user.is_authenticated %}
+          <div class="col-lg-3 text-right">
+            <a class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> {{user.first_name}}</a>
+            <a href="Login/logout" class="small mr-3"><span class="icon-lock-alt"></span> Log Out</a>
+          </div>
+          {% else%}
+          <div class="col-lg-3 text-right">
+            <a href="Login/login" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
+            <a href="Register/register" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+          </div>
+          {%endif%}
+        </div>
+      </div>
+    </div>
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <div class="site-logo">
+            <a href="index.html" class="d-block">
+              <img src="{% static 'images/logof.png' %}" alt="Image" class="img-fluid" height="30px" width="150px">
+            </a>
+          </div>
+          <div class="mr-auto">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active">
+                  <a href="index.html" class="nav-link text-left">Home</a>
+                </li>
+                
+                <li>
+                  <a href="Test/test" class="nav-link text-left">CAREER TEST</a>
+                </li>
+                <!-- <li>
+                  <a href="courses.html" class="nav-link text-left">Courses</a>
+                </li> -->
+                <li>
+                    <a href="contact.html" class="nav-link text-left">Contact</a>
+                  </li>
+              </ul>                                                                                                                                                                                                                                                                                          </ul>
+            </nav>
+
+          </div>
+          <div class="ml-auto">
+            <div class="social-wrap">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+
+    </header>
+
+    
+    <div class="hero-slide owl-carousel site-blocks-cover">
+      <div class="intro-section" style="background-image: url('/static/images/hero_1.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+              <h1>CAREER PREDICTION</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-section" style="background-image: url('/static/images/hero_1.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+              <h1>LET US HELP YOU TO MAKE FUTURE BRIGHTER</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+
+    <div></div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-lg-4 mb-5">
+            <h2 class="section-title-underline mb-5">
+              <span>Why Academics Works</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+
+            <div class="feature-1 border">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-mortarboard text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>CHOICES</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-school-material text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>ANALYSIS</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
+              </div>
+            </div> 
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-library text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>PREDICTION</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section">
+      <div class="container">
+
+
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-lg-6 mb-5">
+            <h2 class="section-title-underline mb-3">
+              <span>Popular Fields</span>
+            </h2>
+            <p>Fields in which most people are exited to make their Careers</p>
+          </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="col-12">
+              <div class="owl-slide-3 owl-carousel">
+                {% for field in fieldx%}
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <a href="course-single.html"><img src="{{field.img.url}}" alt="Image" class="img-fluid"></a>
+                      <div class="category"><h3>{{field.name}}</h3></div>  
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>Average Salary {{field.sal}}L</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">{{field.desc}}</p>
+                      {%if field.name == "Medical Professionals"%}
+                        <p><a href='career/career/medical' class="btn btn-primary rounded-0 px-4">Check Roadmap</a></button></p>
+                      {%elif field.name == "Machine Learning Experts"%}
+                        <p><a href='career/career/ML'  class="btn btn-primary rounded-0 px-4">Check Roadmap</a></button></p>
+                      {%elif field.name == "Data Scientist"%}
+                        <p><a href='career/career/DS' class="btn btn-primary rounded-0 px-4">Check Roadmap</a></button></p>
+                      {%elif field.name == "Blockchain Developer"%}
+                        <p><a href='career/career/Blockchain' class="btn btn-primary rounded-0 px-4">Check Roadmap</a></button></p>
+                      {%endif%}
+                      </div>
+                  </div>
+
+                {% endfor %}
+                 
+                  </div>
+      
+              </div>
+      
+          </div>
+        </div>
+
+        
+        
+      </div>
+    </div>
+
+    
+
+
+    <div class="section-bg style-1" style="background-image: url('/static/images/course_3.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 class="section-title-underline style-2">
+              <span>About Our Website</span>
+            </h2>
+          </div>
+          <div class="col-lg-8">
+            <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem nesciunt quaerat ad reiciendis perferendis voluptate fugiat sunt fuga error totam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus assumenda omnis tempora ullam alias amet eveniet voluptas, incidunt quasi aut officiis porro ad, expedita saepe necessitatibus rem debitis architecto dolore? Nam omnis sapiente placeat blanditiis voluptas dignissimos, itaque fugit a laudantium adipisci dolorem enim ipsum cum molestias? Quod quae molestias modi fugiat quisquam. Eligendi recusandae officiis debitis quas beatae aliquam?</p>
+            <p><a href="#">Read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"/></svg></div>
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+
+
+
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
